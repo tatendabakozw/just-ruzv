@@ -27,7 +27,7 @@ function Navbar() {
                 <img src={logo} alt="logo" className="w-32" />
             </span>
             <div className="flex-grow"></div>
-            <div className="md:flex hidden">
+            <div className="md:flex hidden flex-row items-center">
                 {
                     nav_options.map(option=>(
                         <span key={option.id} className={`${shadowOn ? "text-gray-700" : "text-white" } text-sm ml-4 transition duration-500 ease-in-out cursor-pointer uppercase `}>
@@ -35,6 +35,7 @@ function Navbar() {
                         </span>
                     ))
                 }
+                <span className={`${shadowOn ? "text-blue-900 rounded-full border border-blue-900 hover:bg-gray-50" : "text-white rounded-full border border-white hover:bg-blue-800" } text-sm ml-4 transition duration-500 ease-in-out cursor-pointer uppercase py-2 px-6 font-semibold`}>Let's Talk</span>
             </div>
             <div className="md:hidden flex">
                 <Navdropdown icon={<MenuAlt1Icon height={24} width={24} className={`${shadowOn ? "text-gray-700" : ""}text-white`} />}/>
